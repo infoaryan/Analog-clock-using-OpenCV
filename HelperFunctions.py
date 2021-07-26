@@ -1,10 +1,15 @@
+#Import the modules
 import cv2
 import datetime
 import math
+
+#import the attributes
 from constants import COLORS
 from constants import RADIUS
 from constants import CENTER
 
+
+#get theposition of ticks from the function
 def get_ticks():
 	hours_init = []
 	hours_dest = []
@@ -23,6 +28,7 @@ def get_ticks():
 
 	return hours_init, hours_dest
 
+#Turn time into suitable representation
 def getDigitalTime(h,m,s):
 	time = ""
 	hour = ""
@@ -43,7 +49,10 @@ def getDigitalTime(h,m,s):
 	time = hour+minute+second
 	return time
 
+#Function for drawing the hands of teh clock
 def draw_time(image):
+
+	#getting the time from time module 
 	time_now = datetime.datetime.now().time()
 	hour = math.fmod(time_now.hour, 12)
 	minute = time_now.minute

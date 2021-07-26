@@ -7,5 +7,9 @@ COLORS = {'blue': (255, 0, 0), 'green': (0, 255, 0), 'red': (0, 0, 255), 'yellow
 
 #radius of the clock
 RADIUS = 260
+
+#Center point of the clock
 CENTER = (320,320)
+
+#The total size of background
 CANVAS_SIZE = (640,640,3)
